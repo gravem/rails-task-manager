@@ -14,5 +14,7 @@ Rails.application.routes.draw do
 
   patch 'tasks/:id', to: 'tasks#update'
 
-  get '/tasks/:id', to: 'tasks#show', as: 'task'
+  delete 'tasks/:id', to: 'tasks#destroy'
+
+  get 'tasks/:id', to: 'tasks#show', as: 'task'
 end
